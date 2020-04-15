@@ -1,6 +1,7 @@
 import React from "react";
-// get our fontawesome imports
-import { faArrowUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+
+import { faArrowUp, faFileDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./hero.styles.scss";
@@ -34,18 +35,24 @@ const Hero = () => (
         </p>
       </div>
       <div className="hero__content__btn">
-        <a
-          href="#contact"
+        <Link
+          to="/contact"
           className="btn btn-general btn-home"
           title="Contact Me"
         >
           Contact Me
+        </Link>
+
+        <a
+          href="../../assets/img/about/about-1.png"
+          download
+          className="btn btn-download"
+          title="Download My Resume"
+        >
+          Download Resume <FontAwesomeIcon icon={faFileDownload} />
         </a>
       </div>
     </div>
-    <a href="#contact" className="hero__content-arrow-down">
-      <FontAwesomeIcon icon={faAngleDown} />
-    </a>
   </section>
 );
 

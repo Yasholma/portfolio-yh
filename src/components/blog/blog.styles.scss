@@ -34,3 +34,10 @@
     gap: 1rem;
   }
 }
+
+@include media-md {
+  .blog {
+    width: 70%;
+    margin: 0 auto;
+  }
+}

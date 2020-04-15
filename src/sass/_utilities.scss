@@ -16,6 +16,29 @@ $instagram: #833ab4;
 $linkedin: #0077b5;
 $github: #211f1f;
 
+// Viewports
+$media-md: 48em;
+$media-lg: 64em;
+$media-xl: 90em;
+
+@mixin media-md {
+  @media screen and (min-width: $media-md) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: $media-lg) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media screen and (min-width: $media-xl) {
+    @content;
+  }
+}
+
 @keyframes arrowSwipe {
   from {
     transform: translateY(5px);

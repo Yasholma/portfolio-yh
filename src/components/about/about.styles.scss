@@ -190,3 +190,22 @@
     padding-top: 0.8rem;
   }
 }
+
+@include media-md {
+  .about {
+    width: 60%;
+    margin: 0 auto;
+
+    &__heading {
+      &-quote {
+        h4 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

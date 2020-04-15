@@ -14,9 +14,20 @@ import { faWhatsapp, faProductHunt } from "@fortawesome/free-brands-svg-icons";
 
 const Header = ({ location: { pathname } }) => {
   const [menuActive, setMenuActive] = useState(false);
+  const [mobile, setMobile] = useState(false);
 
   const toggleMenu = () => {
-    setMenuActive(!menuActive);
+    if (mobile) setMenuActive(!menuActive);
+  };
+
+  const toggleMenuBtn = () => {
+    if (menuActive) {
+      setMenuActive(false);
+      setMobile(false);
+    } else {
+      setMenuActive(true);
+      setMobile(true);
+    }
   };
 
   return (
@@ -75,7 +86,7 @@ const Header = ({ location: { pathname } }) => {
 
           <div
             className={`mobile-btn ${menuActive ? "open" : ""}`}
-            onClick={toggleMenu}
+            onClick={toggleMenuBtn}
           >
             <span></span>
           </div>

@@ -1,0 +1,192 @@
+@import "../../app/App.styles.scss";
+
+.about {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem;
+
+  &__heading {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    &-quote {
+      h4 {
+        text-align: center;
+        overflow: hidden;
+        border-right: 0.15em solid $secondary-color;
+        white-space: pre;
+        margin: 0 auto;
+        letter-spacing: 0.1em;
+        animation: typing 3.5s steps(20, end),
+          blink-caret 0.75s step-end infinite;
+
+        span {
+          color: $primary-color;
+        }
+      }
+
+      p {
+        border: 1px solid $smoke;
+        border-radius: 0.5rem;
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        font-family: $text-font;
+        font-weight: 600;
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          border: 1px solid $smoke;
+          bottom: -6px;
+          left: 50%;
+          transform: rotate(136deg);
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 10% auto;
+    padding: 0 1rem;
+    margin: 0.2rem auto 0;
+    border: 1px solid $smoke;
+    border-bottom-color: transparent;
+    border-top: 4px solid $secondary-color;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    .social-list {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 1rem;
+      z-index: 2;
+
+      li {
+        width: 28px;
+        height: 28px;
+        margin: 2rem auto;
+        a {
+          display: inline-block;
+          border-radius: 50%;
+          border: 1px solid $primary-color;
+          @include transition-ease(400ms);
+
+          svg {
+            padding: 1rem;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+            @include transition-ease(400ms);
+          }
+        }
+
+        &:first-child {
+          margin-top: 1rem;
+          a:hover {
+            background: $facebook;
+            border-color: $facebook;
+            transform: rotate(360deg);
+          }
+          svg {
+            &:hover {
+              path {
+                fill: $white;
+                @include transition-ease(400ms);
+              }
+            }
+            path {
+              fill: $facebook;
+              @include transition-ease(400ms);
+            }
+          }
+        }
+        &:nth-child(2) {
+          a:hover {
+            background: $twitter;
+            border-color: $twitter;
+            transform: rotate(360deg);
+          }
+          svg {
+            &:hover {
+              path {
+                fill: $white;
+                @include transition-ease(400ms);
+              }
+            }
+            path {
+              fill: $twitter;
+              @include transition-ease(400ms);
+            }
+          }
+        }
+        &:nth-child(3) {
+          a:hover {
+            background: $github;
+            border-color: $github;
+            transform: rotate(360deg);
+          }
+          svg {
+            &:hover {
+              path {
+                fill: $white;
+                @include transition-ease(400ms);
+              }
+            }
+            path {
+              fill: $github;
+              @include transition-ease(400ms);
+            }
+          }
+        }
+        &:nth-child(4) {
+          a:hover {
+            background: $linkedin;
+            border-color: $linkedin;
+            transform: rotate(360deg);
+          }
+          svg {
+            &:hover {
+              path {
+                fill: $white;
+                @include transition-ease(400ms);
+              }
+            }
+            path {
+              fill: $linkedin;
+              @include transition-ease(400ms);
+            }
+          }
+        }
+      }
+    }
+
+    &-image {
+      margin-right: -1rem;
+      z-index: 1;
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+
+  &__resume {
+    border-top: 2px solid $secondary-color;
+    text-align: center;
+    padding: 0;
+    padding-top: 0.8rem;
+  }
+}

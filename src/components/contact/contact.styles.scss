@@ -1,0 +1,136 @@
+@import "../../app/App.styles.scss";
+
+.contact {
+  width: 100%;
+  height: 100%;
+  background: $primary-color;
+  box-sizing: border-box;
+
+  &__heading {
+    text-align: center;
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.2;
+      margin: 0;
+      margin-bottom: 1.5rem;
+    }
+    h5 {
+      font-size: 1rem;
+      color: $secondary-color;
+      text-transform: uppercase;
+      display: inline-block;
+      margin: 1.5rem auto 1rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.8rem;
+
+    &-details {
+      box-shadow: 0 0 0.5rem $secondary-color;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      font-family: $text-font;
+
+      p {
+        font-size: 0.9rem;
+        color: $smoke;
+        text-align: center;
+        font-weight: 600;
+        text-indent: 1.4rem;
+        margin: 0;
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+        color: $white;
+
+        li {
+          display: flex;
+          justify-content: center;
+          margin: 0.8rem 0;
+
+          svg {
+            text-align: left;
+          }
+
+          span {
+            display: inline-block;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+
+    &-message {
+      box-shadow: 0 0 0.5rem $secondary-color;
+      border-radius: 0.5rem;
+      padding: 1rem 0.5rem;
+
+      .heading {
+        h2 {
+          font-size: 1.5rem;
+          font-weight: 400;
+          line-height: 1.3;
+          margin: 0;
+          text-transform: uppercase;
+          text-align: center;
+          color: $white;
+        }
+        p {
+          font-size: 0.9rem;
+          text-align: center;
+          color: $smoke;
+        }
+      }
+
+      form {
+        width: 100%;
+        height: 100%;
+      }
+
+      .f-group {
+        display: block;
+        padding: 15px 0;
+      }
+
+      .f-group label {
+        display: block;
+      }
+
+      .form-style {
+        width: 100%;
+        outline-color: &secondary-color;
+        font-family: $font;
+        padding: 5px 15px;
+        font-size: 12px;
+        line-height: 1.8;
+        border-radius: 0;
+        box-sizing: border-box;
+        border: 1px solid $primary-color;
+        border-radius: 0.35rem;
+      }
+
+      button {
+        cursor: pointer;
+        font-size: 0.7rem;
+        border-color: transparent;
+        font-weight: 700;
+        padding: 0.5rem 1rem;
+        box-shadow: 0 2px 1px $secondary-color;
+
+        &:hover {
+          box-shadow: 0 0 0 $secondary-color;
+        }
+      }
+    }
+  }
+}

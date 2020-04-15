@@ -1,0 +1,117 @@
+$primary-color: #3dac93;
+$secondary-color: #00ffec;
+$text-color: #212226;
+$black: #000;
+$white: #fff;
+$danger: #d9534f;
+$success: #5cb85c;
+$smoke: #c4c4c4;
+$text-font: Raleway, sans-serif;
+$font: "Open Sans", sans-serif;
+
+// Social Colors
+$facebook: #3b5998;
+$twitter: #1da1f2;
+$instagram: #833ab4;
+$linkedin: #0077b5;
+$github: #211f1f;
+
+@keyframes arrowSwipe {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: $secondary-color;
+  }
+}
+
+@mixin arrowSwipe($time) {
+  animation-name: arrowSwipe;
+  animation-duration: $time;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@mixin transition-ease($time) {
+  transition: all $time ease-in-out;
+}
+
+.btn {
+  text-decoration: none;
+  color: $white;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09rem;
+  font-family: $text-font;
+  border-radius: 1.75rem;
+  display: inline-block;
+  @include transition-ease(400ms);
+}
+
+.btn-general {
+  margin: 0 0.375rem;
+  padding: 0.75rem 2.875rem;
+}
+
+.btn-download {
+  display: inline-block;
+  border: 1px solid $secondary-color;
+  color: $black;
+  margin: 0;
+  padding: 0.5rem 0.8rem;
+  &:hover {
+    background: $secondary-color;
+    color: $white;
+  }
+}
+
+.btn-home {
+  border: 1px solid $white;
+}
+
+.btn-home:hover,
+.btn-home:focus {
+  color: $white;
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+}
+
+.content-box-lg {
+  padding: 120px 0;
+}
+
+.content-box-md {
+  padding: 100px 0;
+}
+
+.content-box-sm {
+  padding: 5rem 0;
+}

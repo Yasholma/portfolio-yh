@@ -1,0 +1,116 @@
+@import "../../app/App.styles.scss";
+
+.blog__post {
+  border: 1px solid $smoke;
+  border-radius: 0.35rem;
+  border-top: 4px solid $primary-color;
+  padding: 1rem 0.5rem 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  &-heading {
+    border-bottom: 2px solid $primary-color;
+    display: grid;
+    grid-auto-flow: column;
+    padding-bottom: 0.5rem;
+
+    &-author {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      box-shadow: 0 0 0.35rem $smoke;
+      text-align: center;
+      padding: 0.2rem 0.5rem;
+      box-sizing: border-box;
+      margin-right: 0.7rem;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    &-title {
+      margin: 0;
+      margin-top: 0.5rem;
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        &:hover {
+          color: $secondary-color;
+          text-decoration: underline;
+        }
+      }
+      time {
+        margin-top: 0.5rem;
+        display: block;
+        font-size: 0.8rem;
+        color: $smoke;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &-content {
+    p {
+      font-family: $font;
+      font-size: 0.96rem;
+      font-weight: 500;
+      margin: 0.5rem auto;
+    }
+  }
+
+  &-footer {
+    border-top: 1px solid $smoke;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .votes {
+      svg {
+        display: inline-block;
+        margin: 0 0.3rem;
+        cursor: pointer;
+      }
+      svg:first-child {
+        path {
+          color: $success;
+        }
+      }
+
+      svg:nth-child(2) {
+        path {
+          color: $danger;
+        }
+      }
+
+      span {
+        font-family: $text-font;
+        font-size: 1rem;
+        margin-left: 0.3rem;
+        font-weight: 900;
+        display: inline-block;
+      }
+    }
+
+    .read {
+      .btn-read {
+        border: 1px solid $smoke;
+        color: $black;
+        font-size: 0.7rem;
+        text-transform: initial;
+        padding: 0.35rem 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.03rem;
+
+        &:hover {
+          background: $primary-color;
+          color: $white;
+          border-color: $primary-color;
+        }
+      }
+    }
+  }
+}

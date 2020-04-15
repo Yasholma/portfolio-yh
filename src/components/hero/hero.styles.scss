@@ -1,0 +1,107 @@
+@import "../../app/App.styles.scss";
+
+.hero {
+  width: 100%;
+  height: 100%;
+
+  &__bg-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, rgba($black, 0.6), rgba($black, 0.6)),
+      url("../../assets/img/home/home-bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__heading {
+      h1 {
+        color: $white;
+        font-size: 3rem;
+        font-weight: 200;
+        display: inline-block;
+        letter-spacing: 0.1rem;
+        text-shadow: 0 0 1rem $white;
+        margin: 0;
+
+        span.middle {
+          font-weight: 300;
+          color: $secondary-color;
+        }
+      }
+
+      &-action {
+        span {
+          color: $secondary-color;
+          font-weight: 500;
+          font-size: 1.5rem;
+          margin: 0;
+          display: inline-block;
+          padding: 0 0.2rem;
+          @include arrowSwipe(0.5s);
+        }
+      }
+    }
+
+    &__text {
+      p {
+        color: $smoke;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin: 2rem 0;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        line-height: 1rem;
+
+        span {
+          color: $secondary-color;
+          font-weight: 900;
+          display: block;
+        }
+      }
+    }
+
+    &__btn {
+      margin: 1rem 0;
+      a {
+        font-weight: 700;
+        box-shadow: 0 2px 0px $secondary-color;
+
+        &:hover {
+          color: $secondary-color;
+          box-shadow: 0 0px 0px $secondary-color;
+          transform: translateY(3px);
+        }
+      }
+    }
+
+    &-arrow-down {
+      position: absolute;
+      left: 50%;
+      bottom: 1rem;
+      color: $smoke;
+      font-size: 1.5rem;
+      width: 2rem;
+      height: 2rem;
+      text-align: center;
+      margin-left: -1rem;
+      z-index: 1;
+      @include arrowSwipe(400ms);
+    }
+  }
+}

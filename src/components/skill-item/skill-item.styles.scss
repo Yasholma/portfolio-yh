@@ -1,0 +1,72 @@
+@import "../../app/App.styles.scss";
+.skill-item {
+  width: 100%;
+  border: 1px solid $smoke;
+  border-top: 4px solid $primary-color;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: relative;
+
+  &:hover {
+    .skill-item__desc {
+      opacity: 0.9;
+
+      span {
+        animation-name: rotate;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  &__desc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba($color: #000000, $alpha: 0.8);
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @include transition-ease(400ms);
+    opacity: 0;
+
+    p {
+      margin: 0;
+      padding: 0;
+      color: $secondary-color;
+      font-family: $text-font;
+      letter-spacing: 0.03rem;
+      margin-bottom: 0.5rem;
+      @include transition-ease(300ms);
+    }
+
+    span {
+      width: 40px;
+      height: 40px;
+      display: block;
+      color: $white;
+      border: 1px solid $primary-color;
+      box-shadow: inset 0 0 0 0.3rem $secondary-color;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-size: 0.7rem;
+      text-shadow: 2px 5px 2rem $white;
+      font-family: $font;
+    }
+  }
+}

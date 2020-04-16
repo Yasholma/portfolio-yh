@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./post.styles.scss";
-import author1 from "../../assets/img/blog/author-1.png";
-import author2 from "../../assets/img/blog/author-2.png";
+import author1 from "../../assets/img/blog/author-1.webp";
+import author2 from "../../assets/img/blog/author-2.webp";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faThumbsDown } from "@fortawesome/free-solid-svg-icons";

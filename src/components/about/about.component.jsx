@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./about.styles.scss";
-import image from "../../assets/img/about/about-2.png";
+import image from "../../assets/img/about/about-2.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,

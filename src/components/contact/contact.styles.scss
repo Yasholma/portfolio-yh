@@ -143,3 +143,12 @@
     }
   }
 }
+
+@include media-lg {
+  .contact {
+    &__content {
+      width: 40%;
+      margin: 0 auto;
+    }
+  }
+}

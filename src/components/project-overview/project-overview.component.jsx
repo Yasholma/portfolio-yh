@@ -4,7 +4,6 @@ import projects from "./projects";
 import ProjectItem from "./../project-item/project-item.component";
 
 import "./project-overview.styles.scss";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -20,15 +19,20 @@ const ProjectOverview = () => {
         </div>
 
         <div className="project-overview__project-items">
-          {projects.slice(0, 4).map(({ id, ...otherProps }) => (
+          {projects.map(({ id, ...otherProps }) => (
             <ProjectItem key={id} id={id} {...otherProps} />
           ))}
         </div>
 
         <div className="project-overview__project-footer">
-          <Link to="/projects" className="btn btn-general">
-            Show Projects <FontAwesomeIcon icon={faArrowCircleRight} />
-          </Link>
+          <a
+            href="https://github.com/Yasholma"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="btn btn-general"
+          >
+            Github Profile <FontAwesomeIcon icon={faArrowCircleRight} />
+          </a>
         </div>
       </div>
     </section>

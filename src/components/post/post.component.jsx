@@ -8,7 +8,7 @@ import author2 from "../../assets/img/blog/author-2.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faThumbsDown } from "@fortawesome/free-solid-svg-icons";
 
-const Post = ({ author, title, body, timestamp, reactions }) => {
+const Post = ({ author, title, body, timestamp, likes, dislikes }) => {
   return (
     <div className="blog__post">
       <div className="blog__post-heading">
@@ -30,8 +30,9 @@ const Post = ({ author, title, body, timestamp, reactions }) => {
       <div className="blog__post-footer">
         <div className="votes">
           <FontAwesomeIcon icon={faThumbsUp} />
+          <span>{likes}</span>
           <FontAwesomeIcon icon={faThumbsDown} />
-          <span>{reactions}</span>
+          <span>{dislikes}</span>
         </div>
         <div className="read">
           <Link to="" className="btn btn-read">

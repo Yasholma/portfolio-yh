@@ -27,7 +27,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 0.8rem;
 
     &__heading {
       h1 {
@@ -147,6 +146,18 @@
       &__text {
         p {
           font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@include media-sm {
+  .hero {
+    &__content {
+      &__heading {
+        h1 {
+          font-size: 2rem;
         }
       }
     }

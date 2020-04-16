@@ -5,10 +5,12 @@
   height: 100%;
   box-sizing: border-box;
   padding: 0 1rem;
+  margin: 0 auto;
 
   &__heading {
     display: grid;
     grid-template-columns: 1fr;
+    justify-content: center;
 
     &-quote {
       h4 {

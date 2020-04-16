@@ -20,6 +20,13 @@ $github: #211f1f;
 $media-md: 48em;
 $media-lg: 64em;
 $media-xl: 90em;
+$media-sm: 20em;
+
+@mixin media-sm {
+  @media screen and (max-width: $media-sm) {
+    @content;
+  }
+}
 
 @mixin media-md {
   @media screen and (min-width: $media-md) {
@@ -127,14 +134,14 @@ $media-xl: 90em;
   border: 1px solid $primary-color;
 }
 
-.content-box-lg {
-  padding: 120px 0;
-}
-
 .content-box-md {
-  padding: 100px 0;
+  padding: 6.25rem 0;
 }
 
 .content-box-sm {
   padding: 5rem 0;
+}
+
+.content-box-xs {
+  padding: 2rem 0;
 }

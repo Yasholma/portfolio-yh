@@ -9,7 +9,7 @@ import "./hero.styles.scss";
 const Hero = () => (
   <section className="hero">
     <div className="hero__bg-image"></div>
-    <div className="hero__content">
+    <div className="hero__content content-box-xs">
       <div className="hero__content__heading">
         <h1>
           Yahaya <span className="middle">Hyellamoda</span> Yohanna

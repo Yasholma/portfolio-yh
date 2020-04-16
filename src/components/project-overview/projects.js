@@ -25,7 +25,7 @@ const projects = [
     title: "Ngalaba Market",
     image: "",
     url: "https://ngalaba-yhy.netlify.com/",
-    description: "Byteworks Design Assessment (Design Only)",
+    description: "Byteworks Assessment (Design Only)",
   },
   {
     id: 5,
